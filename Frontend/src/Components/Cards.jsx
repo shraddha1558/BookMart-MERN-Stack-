@@ -43,8 +43,8 @@ function Cards({ item }) {
 
             {/* Price & Buy Button - Centered */}
             <div className="card-actions flex flex-col items-center mt-3">
-              <div className="badge badge-outline text-lg font-bold px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md">
-                ${item.price}
+              <div className="text-lg font-bold px-4 py-2 text-gray-800 dark:text-gray-200">
+                ₹{item.price}
               </div>
               <button className="mt-3 px-4 py-2 w-full text-center rounded-lg border-2 hover:bg-pink-500 hover:text-white transition duration-200 dark:hover:bg-pink-400">
                 Buy Now
