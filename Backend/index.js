@@ -3,8 +3,12 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import cors from "cors";
 import router from "./route/book.route.js"
+
+import userroute from "./route/user.route.js"
+
 const app = express()
 
+app.use(express.json());
 app.use(cors());
 dotenv.config();
 const PORT = process.env.PORT || 4000;
@@ -25,6 +29,7 @@ catch (error){
 }
 
 app.use("/book",router);
+app.use("/user",userroute);
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
 })
