@@ -53,7 +53,7 @@ function Footer() {
           <p className="hover:scale-105 transition-transform duration-300">
             © {new Date().getFullYear()} - All rights reserved by{" "}
             <span className="font-semibold text-blue-500 dark:text-cyan-400">
-              ACME Industries Ltd
+              Shraddha Sahu
             </span>
           </p>
         </aside>

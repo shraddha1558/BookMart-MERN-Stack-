@@ -30,7 +30,7 @@ export default function Navbar({ theme, setTheme }) {
               <ul className="menu menu-horizontal px-1">
                 {[
                   { name: "Home", path: "/" },
-                  { name: "Course", path: "/course" },
+                  { name: "Books", path: "/course" },
                   { name: "Contact", path: "/contact" },
                   { name: "About", path: "/about" },
                 ].map((item, index) => (

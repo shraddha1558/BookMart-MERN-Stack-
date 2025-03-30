@@ -1,33 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Cards from "./Cards";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import list from "../Data/list.json";
-function Course() {
+
+function Books() {
   return (
     <>
-      <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4 mt-20">
-        <div className="mt-28 items-center justify-center text-center">
-          <h1 className="text-2xl  md:text-4xl">
-            We're delighted to have you{" "}
-            <span className="text-pink-500"> Here! :)</span>
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+        {/* Header Section */}
+        <div className="mt-28 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Discover Your Next Great Read! 📚
           </h1>
-          <p className="mt-12">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-            assumenda? Repellendus, iste corrupti? Tempore laudantium
-            repellendus accusamus accusantium sed architecto odio, nisi expedita
-            quas quidem nesciunt debitis dolore non aspernatur praesentium
-            assumenda sint quibusdam, perspiciatis, explicabo sequi fugiat amet
-            animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
-            consequatur!
+          <p className="mt-8 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            Browse through a carefully selected collection of books across
+            various genres. Whether you love fiction, self-help, or academic
+            reads, we have something for you. Find your perfect book and get
+            lost in the world of stories and knowledge.
           </p>
           <Link to="/">
-            <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">
-              Back
+            <button className="mt-6 bg-pink-500 text-white px-5 py-3 text-lg rounded-md hover:bg-pink-700 duration-300">
+              Back to Home
             </button>
           </Link>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
+
+        {/* Grid Section */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {list.map((item) => (
             <Cards key={item.id} item={item} />
           ))}
@@ -37,4 +36,4 @@ function Course() {
   );
 }
 
-export default Course;
+export default Books;

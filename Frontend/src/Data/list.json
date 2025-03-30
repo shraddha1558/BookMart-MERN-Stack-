@@ -1,50 +1,102 @@
 [
     {
         "id": 1,
-        "name":"Story Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
-        "price": 0,
-        "category":"free",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
+        "name": "Harry Potter and the Sorcerer’s Stone",
+        "title": "Follow the journey of a young wizard, Harry Potter, as he discovers his magical heritage and battles dark forces.",
+        "price": 35,
+        "category": "Fantasy",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 5,
+        "reviews": 1520
     },
     {
         "id": 2,
-        "name":"Comedy Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
-        "price": 20,
-        "category":"Entertainment",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
-    },
-    {
-        "id": 1,
-        "name":"Sports Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
-        "price": 60,
-        "category":"Sports",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
+        "name": "Wednesday: A Dark Academia Mystery",
+        "title": "A thrilling mystery following Wednesday Addams as she uncovers secrets at Nevermore Academy.",
+        "price": 28,
+        "category": "Mystery",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 4,
+        "reviews": 865
     },
     {
         "id": 3,
-        "name":"Music Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
+        "name": "The Hunger Games",
+        "title": "In a dystopian world, Katniss Everdeen fights for survival in a deadly televised competition.",
         "price": 40,
-        "category":"Music",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
+        "category": "Dystopian",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 5,
+        "reviews": 2300
     },
     {
         "id": 4,
-        "name":"Story Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
-        "price": 0,
-        "category":"free",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
+        "name": "Stranger Things: The Upside Down Files",
+        "title": "A thrilling novel set in the world of Stranger Things, uncovering secrets of the Upside Down.",
+        "price": 30,
+        "category": "Sci-Fi",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 4,
+        "reviews": 980
     },
     {
         "id": 5,
-        "name":"Story Book",
-        "title": "Lorem , ipsum bla bla.. Desctiblion tilte.",
-        "price": 0,
-        "category":"free",
-        "image":"https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?t=st=1743255166~exp=1743258766~hmac=115e7c7d538c897e5d1f607d0668722d601e02ae75dd7e0c49dc1336c68ee436&w=996"
+        "name": "Percy Jackson & The Olympians",
+        "title": "A young boy discovers he is the son of Poseidon and must prevent a war among the gods.",
+        "price": 33,
+        "category": "Fantasy",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 5,
+        "reviews": 1945
+    },
+    {
+        "id": 6,
+        "name": "The Enchanted Tales",
+        "title": "A magical collection of timeless fairy tales and adventures for all ages.",
+        "price": 18,
+        "category": "New Arrivals",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 3,
+        "reviews": 340
+    },
+    {
+        "id": 7,
+        "name": "Fables & Legends",
+        "title": "A beautiful collection of folklore and mythical stories from around the world.",
+        "price": 22,
+        "category": "New Arrivals",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 4,
+        "reviews": 700
+    },
+    {
+        "id": 8,
+        "name": "Mystery at Midnight",
+        "title": "A gripping mystery novel full of unexpected twists and thrilling suspense.",
+        "price": 30,
+        "category": "New Arrivals",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 4,
+        "reviews": 590
+    },
+    {
+        "id": 9,
+        "name": "Galactic Adventures",
+        "title": "An exciting sci-fi journey across galaxies, filled with action and discovery.",
+        "price": 50,
+        "category": "Sci-Fi",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 5,
+        "reviews": 1260
+    },
+    {
+        "id": 10,
+        "name": "Horror Stories: Dark Nights",
+        "title": "A chilling collection of terrifying tales that will keep you up at night.",
+        "price": 25,
+        "category": "Horror",
+        "image": "https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg",
+        "rating": 3,
+        "reviews": 450
     }
 ]

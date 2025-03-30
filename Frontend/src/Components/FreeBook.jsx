@@ -1,64 +1,51 @@
 import React from "react";
 import list from "../Data/list.json";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards";
 
 function FreeBook() {
-  const filterData = list.filter((data) => data.category === "free");
+  const filterData = list.filter((data) => data.category === "New Arrivals");
 
-  var settings = {
-    dots: true,
-    infinite: false,
+  const settings = {
+    dots: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
+    slidesToShow: 2, // Show 2 cards by default
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
+        breakpoint: 1024, // Tablets
+        settings: { slidesToShow: 2 },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        breakpoint: 768, // Mobile
+        settings: { slidesToShow: 1 },
       },
     ],
   };
 
-  console.log(filterData);
-
   return (
-    <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-        <h1 className="font-bold text-xl pb-2">Free Offered Courses</h1>
-      </div>
-      <div className="slider-container">
-        <Slider {...settings}>
-          {filterData.map((item) => (
-            <Cards item={item} key={item.id} />
-          ))}
-        </Slider>
-      </div>
-    </>
+    <div className="max-w-screen-lg mx-auto px-4">
+      {/* Header */}
+      <h1 className="font-bold text-2xl pb-4 text-center text-gray-900 dark:text-gray-100">
+        New Arrivals
+      </h1>
+
+      {/* Slider */}
+      <Slider {...settings} className="py-6">
+        {filterData.map((item) => (
+          <div key={item.id} className="px-3">
+            <div className="hover:scale-105 transition-all duration-300">
+              <Cards item={item} />
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 }
 
