@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,14 +7,30 @@ function Footer() {
       <footer className="footer footer-horizontal footer-center text-base-content rounded-lg p-6 shadow-lg dark:bg-gray-900 dark:text-white transition-all duration-300 dark:shadow-xl dark:border-t border-gray-700">
         {/* Navigation Links */}
         <nav className="grid grid-flow-col gap-6 text-lg font-medium">
-          {["About us", "Contact", "Jobs", "Press kit"].map((item, index) => (
-            <a
-              key={index}
-              className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
-            >
-              {item}
-            </a>
-          ))}
+          <Link
+            to="/about"
+            className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/contact"
+            className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
+          >
+            Contact
+          </Link>
+          <a
+            href="#"
+            className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
+          >
+            Jobs
+          </a>
+          <a
+            href="#"
+            className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
+          >
+            Press Kit
+          </a>
         </nav>
 
         {/* Social Media Icons */}

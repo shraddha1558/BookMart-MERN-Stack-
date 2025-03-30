@@ -4,6 +4,7 @@ import Home from "./Home/Home.jsx";
 import Courses from "./Courses/Courses.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import SignUp from "./Components/Signup.jsx";
+import ContactUs from "./Contact/ContactUs.jsx";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Course" element={<Courses />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/Contact" element={<ContactUs />} />
         </Routes>
       </div>
     </Router>
