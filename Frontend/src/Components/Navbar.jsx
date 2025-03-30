@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import Logout from "./Logout";
+import { useAuth } from "../Context/Authprovider.jsx";
 
 export default function Navbar({ theme, setTheme }) {
+  const [authUser, setAuthUser] = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -107,14 +110,22 @@ export default function Navbar({ theme, setTheme }) {
             </svg>
           </label>
 
-          {/* Login Button */}
-          <button
-            className="btn"
-            onClick={() => document.getElementById("my_modal_5").showModal()}
-          >
-            Login
-          </button>
-          <Login />
+          {authUser ? (
+            <Logout />
+          ) : (
+            <>
+              {/* Login Button */}
+              <button
+                className="btn"
+                onClick={() =>
+                  document.getElementById("my_modal_5").showModal()
+                }
+              >
+                Login
+              </button>
+              <Login />
+            </>
+          )}
         </div>
       </div>
     </div>

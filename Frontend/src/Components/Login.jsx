@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function Login() {
   const navigate = useNavigate();
@@ -11,9 +13,32 @@ function Login() {
   } = useForm();
 
   // ✅ Define onSubmit function
-  const onSubmit = (data) => {
-    console.log(data); // You can handle login logic here
-    navigate("/"); // Redirect to Home after login
+  const onSubmit = async (data) => {
+    // ✅ Make function async
+    try {
+      const userInfo = {
+        email: data.email.trim(),
+        password: data.password,
+      };
+
+      const res = await axios.post(
+        "http://localhost:4001/user/login",
+        userInfo
+      ); // ✅ Now await works properly
+
+      if (res.data) {
+        // alert("Login  Successful!");
+        toast.success("Login  Successful!");
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      }
+    } catch (err) {
+      if (err.response) {
+        toast.error("Error: " + err.response.data.message);
+        // alert("Error: " + err.response.data.message);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    }
   };
 
   return (
@@ -38,10 +63,10 @@ function Login() {
               type="email"
               placeholder="Enter your email"
               className="w-full p-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-              {...register("Email", { required: "Email is required" })}
+              {...register("email", { required: "Email is required" })}
             />
-            {errors.Email && (
-              <p className="text-red-500 text-sm">{errors.Email.message}</p>
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
           </div>
 
@@ -54,10 +79,10 @@ function Login() {
               type="password"
               placeholder="Enter your password"
               className="w-full p-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-              {...register("Password", { required: "Password is required" })}
+              {...register("password", { required: "Password is required" })}
             />
-            {errors.Password && (
-              <p className="text-red-500 text-sm">{errors.Password.message}</p>
+            {errors.password && (
+              <p className="text-red-500 text-sm">{errors.password.message}</p>
             )}
           </div>
 
