@@ -1,56 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <footer className="footer footer-horizontal footer-center  text-base-content rounded p-10">
-        <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+    <div className="mt-10">
+      <footer className="footer footer-horizontal footer-center text-base-content rounded-lg p-6 shadow-lg dark:bg-gray-900 dark:text-white transition-all duration-300 dark:shadow-xl dark:border-t border-gray-700">
+        {/* Navigation Links */}
+        <nav className="grid grid-flow-col gap-6 text-lg font-medium">
+          {["About us", "Contact", "Jobs", "Press kit"].map((item, index) => (
+            <a
+              key={index}
+              className="link link-hover hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-300"
+            >
+              {item}
+            </a>
+          ))}
         </nav>
-        <nav>
-          <div className="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
-            </a>
+
+        {/* Social Media Icons */}
+        <nav className="mt-4">
+          <div className="grid grid-flow-col gap-6">
+            {[
+              { href: "#", icon: "twitter", color: "text-blue-400" },
+              { href: "#", icon: "youtube", color: "text-red-500" },
+              { href: "#", icon: "facebook", color: "text-blue-600" },
+            ].map(({ href, icon, color }, index) => (
+              <a key={index} href={href} className={`group ${color}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="transition-all duration-300 group-hover:scale-110"
+                >
+                  {icon === "twitter" && (
+                    <path d="M24 4.5a9.9 9.9 0 01-2.8.8 4.9 4.9 0 002.2-2.7c-1 .6-2 1-3.1 1.2a5 5 0 00-8.5 4.5A14 14 0 011.7 3a5 5 0 001.5 6.7A5 5 0 01.9 9v.1a5 5 0 004 4.8 5 5 0 01-2.3.1 5 5 0 004.6 3.4A10 10 0 010 19.5a14 14 0 007.6 2.3A14 14 0 0022 7.5c1-.7 1.8-1.5 2.5-2.5z" />
+                  )}
+                  {icon === "youtube" && (
+                    <path d="M19.6 3.2c-3.6-.2-11.6-.2-15.2 0-3.9.3-4.3 2.6-4.4 8.8.1 6.2.5 8.5 4.4 8.8 3.6.2 11.6.2 15.2 0 3.9-.3 4.3-2.6 4.4-8.8-.1-6.2-.5-8.5-4.4-8.8zm-10.6 12.8v-8l8 4-8 4z" />
+                  )}
+                  {icon === "facebook" && (
+                    <path d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V7c0-1 0-1.3 1.1-1.3h2.9v-5h-3.8C10.4 0 9 1.6 9 4.6V8z" />
+                  )}
+                </svg>
+              </a>
+            ))}
           </div>
         </nav>
-        <aside>
-          <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
-            Industries Ltd
+
+        {/* Copyright Section */}
+        <aside className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p className="hover:scale-105 transition-transform duration-300">
+            © {new Date().getFullYear()} - All rights reserved by{" "}
+            <span className="font-semibold text-blue-500 dark:text-cyan-400">
+              ACME Industries Ltd
+            </span>
           </p>
         </aside>
       </footer>

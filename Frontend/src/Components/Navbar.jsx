@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 
 export default function Navbar({ theme, setTheme }) {
   const toggleTheme = () => {
@@ -101,9 +102,14 @@ export default function Navbar({ theme, setTheme }) {
           </label>
 
           {/* Login Button */}
-          <Link to="/login" className="btn">
+          {/* Login Button */}
+          <button
+            className="btn"
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          >
             Login
-          </Link>
+          </button>
+          <Login />
         </div>
       </div>
     </div>

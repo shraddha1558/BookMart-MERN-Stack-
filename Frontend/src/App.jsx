@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home/Home.jsx";
 import Courses from "./Courses/Courses.jsx";
 import Navbar from "./Components/Navbar.jsx";
+import SignUp from "./Components/Signup.jsx";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Course" element={<Courses />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </Router>
