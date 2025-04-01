@@ -28,6 +28,9 @@ catch (error){
     console.log("Error:", error)
 }
 
+app.use("/",(req,res)=>{
+res.send("home route")
+});
 app.use("/book",router);
 app.use("/user",userroute);
 app.listen(PORT, () => {
