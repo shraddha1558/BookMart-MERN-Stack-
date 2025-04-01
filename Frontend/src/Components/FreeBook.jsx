@@ -14,7 +14,7 @@ function FreeBook() {
     const getBook = async () => {
       try {
         const res = await axios.get(
-          "https://book-mart-mern-stack-uray.vercel.app/"
+          "https://book-mart-mern-stack-uray.vercel.app/book"
         );
         console.log(res.data);
         const data = res.data.filter(
