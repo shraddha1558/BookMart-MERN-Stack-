@@ -1,11 +1,12 @@
 
 # 📚 Book Mart - MERN Stack Book Store
 
+
 ![Book Mart in Action](https://drive.google.com/uc?id=1ozHz5f84m4TZoCn7EuTweEE_6C2EnTDG)
 
 <div align="center">
 
-🔗 *Live Demo:* [Book Mart](https://book-mart-mern-stack-t8w7.vercel.app/course)
+🔗 *Live Demo:* [Book Mart](https://book-mart-mern-stack-t8w7.vercel.app/)
 
 </div>
 
