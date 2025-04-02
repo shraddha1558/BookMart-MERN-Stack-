@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useAuth } from "../Context/Authprovider";
 
 function Login() {
+  const [authUser, setAuthUser] = useAuth();
   const navigate = useNavigate();
   const {
     register,
@@ -30,6 +32,9 @@ function Login() {
         // alert("Login  Successful!");
         toast.success("Login  Successful!");
         localStorage.setItem("Users", JSON.stringify(res.data.user));
+        const user = localStorage.getItem("Users");
+
+        setAuthUser(user);
       }
     } catch (err) {
       if (err.response) {
@@ -40,6 +45,7 @@ function Login() {
       }
     }
   };
+  useEffect(() => {}, [authUser]);
 
   return (
     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
